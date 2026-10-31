@@ -1377,12 +1377,6 @@ const SLIDES = [
     body:
       "",
   },
-  {
-    title: "",
-    body:
-      "",
-  },
-  
 {
   title: "OTHER INFORMATION",
   body: `
@@ -1520,11 +1514,6 @@ are NOT included.
 `
 },
 
-  {
-    title: "POSSIBLE SOLUTIONS",
-    body:
-      "",
-  },
   {
   title: "WORKS CITED",
   body: `
