@@ -1372,11 +1372,7 @@ const SLIDES = [
     body:
       "So, this project dives in to find what the impact of extending Citibus evening hours (until 10:00 PM on a limited scale) and introducing limited weekend service is on the academic engagement, cost truncation, safety, and overall quality of life for off-campus students at Texas Tech University.",
   },
-  {
-    title: "WHAT WE HEARD",
-    body:
-      "",
-  },
+  
 {
   title: "OTHER INFORMATION",
   body: `
