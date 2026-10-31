@@ -13,7 +13,6 @@ const H = 640;
 
 const VIDEO_PATHS = [
   `${ASSET_BASE}interviews/interview1.mp4`,
-  `${ASSET_BASE}interviews/interview2.mp4`,
 ];
 
 const progress = {
@@ -1161,32 +1160,27 @@ class HousingScene extends WalkScene {
     drawHousing(this);
 
     this.npcs = [
-      addCharacter(
-        this, 382, 347,
-        "npc_25",
-        "Nuha [Video]"
-      ),
-      addCharacter(
-        this, 595, 347,
-        "npc_26",
-        "Resident 2 [Video]"
-      ),
-    ];
+  addCharacter(
+    this, 382, 347,
+    "npc_25",
+    "Nuha [Video]"
+  ),
+];
 
     this.setupWalking(145, 365);
 
     panel(
-      this,
-      "HOUSING COMPLEX",
-      `Watch both recorded interviews (${progress.housing.size}/2)`
-    );
+  this,
+  "HOUSING COMPLEX",
+  `Watch the recorded interview (${progress.housing.size}/1)`
+);
 
     controlsHint(this);
 
     this.showDialogue([
-      "We've reached the housing complex. Two residents agreed to share their experiences on video.",
-      "Approach each resident and press E to watch their interview.",
-    ]);
+  "We've reached the housing complex. One resident agreed to share their experience on video.",
+  "Approach the resident and press E to watch the interview.",
+]);
   }
 
   interact() {
@@ -1203,13 +1197,13 @@ class HousingScene extends WalkScene {
         showInterviewVideo(this, i, () => {
           progress.housing.add(i);
 
-          if (progress.housing.size === 2) {
+          if (progress.housing.size === 1) {
             this.showDialogue([
-              "Both interviews are complete. The afternoon has slipped away during our research.",
-              "The sky is getting darker. We should check the bus stop.",
-            ], () => {
-              this.scene.start("EveningScene");
-            });
+  "The interview is complete. The afternoon has slipped away during our research.",
+  "The sky is getting darker. We should check the bus stop.",
+], () => {
+  this.scene.start("EveningScene");
+});
           } else {
             this.showDialogue(
               "Interview saved. Find the second resident."
